@@ -11,8 +11,8 @@ import com.amazonaws.services.eventbridge.model.PutEventsRequestEntry;
 import com.amazonaws.services.eventbridge.model.PutEventsResult;
 
 public class EventBridgeMain {
-    private static String accessKey = "AKIARZ6TUUMLAEOBV7XA";
-    private static String secretKey = "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";
+    private static String accessKey = "access-key";
+    private static String secretKey = "secret-key";
     public static void main(String[] args) {
 
         System.out.println("Hello world!");
@@ -21,8 +21,8 @@ public class EventBridgeMain {
                 .withCredentials(new AWSStaticCredentialsProvider(new BasicAWSCredentials(accessKey, secretKey)))
                 .build();
 
-        System.getProperty("aws.accessKeyId", "AKIARZ6TUUMLA46BOGHD");
-        System.getProperty("aws.secretKey", "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");
+        System.getProperty("aws.accessKeyId", "access-key");
+        System.getProperty("aws.secretKey", "secret-key");
         putEvents(client);
     }
 
